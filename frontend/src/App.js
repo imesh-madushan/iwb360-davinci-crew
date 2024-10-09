@@ -9,6 +9,7 @@ import NavBarAfterAuth from './components/navBarAfterAuth/navBarAfterAuth';
 import SideBar from './components/sideBar/sideBar';
 import CreateEvent from './pages/createEvent/createEvent';
 import NotFound from './pages/notFound/notFound';
+import './App.css';
 
 function App() {
   const [authenticated, setAuthenticated] = useState(true);
@@ -26,11 +27,13 @@ function App() {
         <>
           <NavBarAfterAuth />
           <SideBar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/create" element={<CreateEvent />} />
-            <Route path="/*" element={<NotFound />} />
-          </Routes>
+          <div className="mainbody">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/create" element={<CreateEvent />} />
+              <Route path="/*" element={<NotFound />} />
+            </Routes>
+          </div>
         </>
       ) : (
         <>

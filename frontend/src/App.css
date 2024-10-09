@@ -1,0 +1,7 @@
+.mainbody{
+    position: relative;
+    top: 68px;
+    left: 165px;
+    width: calc(100% - 165px);
+    height: calc(100vh - 68px);
+}
