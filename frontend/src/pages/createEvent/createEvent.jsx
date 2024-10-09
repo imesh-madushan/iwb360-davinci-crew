@@ -3,8 +3,8 @@ import './createEvent.css';
 
 const CreateEvent = () => {
     return (
-        <div>
-        <h1>CreateEvent</h1>
+        <div className="createEvent">
+            <h1>Create New Event</h1>
         </div>
     );
 }

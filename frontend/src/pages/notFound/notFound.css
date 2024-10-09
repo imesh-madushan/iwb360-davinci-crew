@@ -1,0 +1,17 @@
+.notfound{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: calc(4rem + 5px);
+    display: flex;
+}
+
+.notfound h1{
+    font-size: 35px;
+    font-weight: 900;
+    position: relative;
+    color: #262626;
+    text-transform: uppercase;
+    padding-left: 20px;
+}
