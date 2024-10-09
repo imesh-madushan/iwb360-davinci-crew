@@ -1,0 +1,15 @@
+.createEvent {
+    display: flex;
+    position: relative;
+    width: calc(100% - 165px);
+    top: 68px;
+    left: 165px;
+    align-items: center;
+    justify-content: center;
+}
+
+.createEvent h1 {
+    font-size: 25px;
+    font-weight: 900;
+    color: #262626;
+}
