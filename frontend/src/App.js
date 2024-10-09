@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
+import { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 import Home from './pages/home/home';
 import Login from './pages/login/login';
 import Register from './pages/register/register';
