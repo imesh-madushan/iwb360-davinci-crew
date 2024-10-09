@@ -7,7 +7,7 @@ import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { RiLogoutCircleRLine } from "react-icons/ri";
+import ExitToAppTwoToneIcon from '@mui/icons-material/ExitToAppTwoTone';
 import './sideBar.css';
 
 const signOut = () => {
@@ -77,7 +77,7 @@ const SideBar = () => {
                         ) : <></>}
                     </div>
                 </div>
-                <div className="logOut"><RiLogoutCircleRLine className="icon" onClick={signOut}/><span onClick={signOut}>SignOut</span></div>
+                <div className="logOut"><ExitToAppTwoToneIcon className="icon" onClick={signOut}/><span onClick={signOut}>SignOut</span></div>
             </aside>
         </>
     );

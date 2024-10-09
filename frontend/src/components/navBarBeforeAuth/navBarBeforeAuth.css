@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2px;
     border-bottom: 1px solid transparent;
     border-image: linear-gradient(to right, #0e0ec2b5, #360880c5) 1;
     background-color: white;
