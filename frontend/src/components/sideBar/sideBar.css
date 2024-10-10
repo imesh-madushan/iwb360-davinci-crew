@@ -6,13 +6,15 @@
     height: calc(100vh - 68px);
     font-size: 0.85rem;
     border-right: 1px solid transparent;
-    border-image: linear-gradient(#0e0ec2b5, #360880c5) 1;
+    border-image: linear-gradient(#161D6F, #2E073F) 1;
     border-radius: 0rem 1rem 1rem 0rem;
     position: fixed;
     left: 0;
     top: 68px;
     user-select: none;
     z-index: 1000;
+    color: #161D6F;
+    font-weight: 500;
 }
 
 .sideBar .links{
@@ -23,7 +25,7 @@
     margin: 1rem 0.4rem;
 }
 
-.sideBar .links a{
+.sideBar a{
     display: flex;   
     align-items: center;
     gap: 0.4rem;
@@ -31,26 +33,24 @@
     text-decoration: none;
 }
 
-.sideBar .links a .icon,
-.sideBar .logOut .icon{
-    width: 1.25rem;
-    height: 1.25rem;
-    color: #08088ff6;
-}
-
 .sideBar .links .arrow{
 
 }
 
-.sideBar .links .out{
+.sideBar .out{
     cursor: default;
     border-radius: 0.65rem;
     /* background: #f1f1f1fa; */
-    padding: 0.6rem 0.6rem;
+    padding: 0.6rem 0.5rem;
+}
+
+.sideBar .out .icon{
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #161D6F;
 }
 
 .sideBar .links .grp{
-    transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .sideBar .links .grp .list{
@@ -76,8 +76,12 @@
     border: none;
 }
 
-.sideBar .logOut .icon,
-.sideBar .logOut span{
-    color: #e80202;
-    cursor: pointer;
+.sideBar .settings{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    margin: 0.5rem;
+    border-radius: 0.7rem;
+    font-weight: bold;
+    border: none;
 }
