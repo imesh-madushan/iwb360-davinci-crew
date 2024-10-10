@@ -78,3 +78,37 @@
     cursor: pointer;
     transition: all 0.9s ease;
 }
+
+/* Mobile Responsive */
+@media screen and (max-width: 480px){
+    .post{
+        width: 100%;
+        max-width: 100%;
+    }
+    .post .creater img{
+        width: 24px;
+        height: 24px;
+    }
+    .post .creater p{
+        font-size: 12px;
+    }
+    .post .title{
+        font-size: 13px;
+    }
+    .post .content p{
+        font-size: 11px;
+    }
+    .post .actions{
+        gap: 10px;
+    }
+    .post .actions button{
+        width: 3rem;
+        height: 1.3rem;
+        border-radius: 0.3rem;
+        font-size: 0.7rem;
+    }
+    .post .actions .icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
