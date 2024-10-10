@@ -7,7 +7,7 @@ import BookmarksIcon from '@mui/icons-material/Bookmarks';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import ExitToAppTwoToneIcon from '@mui/icons-material/ExitToAppTwoTone';
+import SettingsIcon from '@mui/icons-material/Settings';
 import './sideBar.css';
 
 const signOut = () => {
@@ -35,14 +35,14 @@ const SideBar = () => {
             <aside className="sideBar">
                 <div className="links">
                     <div className="out">
-                        <a href="/"><HomeIcon className="icon" /> Home</a>
+                        <a href="/"><HomeIcon className="icon" /> <span>Home</span></a>
                     </div>
                     <div className="out">
-                        <a href="/create"><AddCircleOutlineIcon className="icon"/>Create</a>
+                        <a href="/create"><AddCircleOutlineIcon className="icon" /><span>Create</span></a>
                     </div>
                     <div className="myevents out grp">
                         <a onClick={triggerShowMyevents}>
-                            <EventNoteIcon className="icon" />My Eevents
+                            <EventNoteIcon className="icon" /><span>My Eevents</span>
                             {isMyeventsShow ? (<KeyboardArrowDownIcon className="arrow" />) : (<KeyboardArrowRightIcon className="arrow" />)}
                         </a>
                         {isMyeventsShow ? (
@@ -54,7 +54,7 @@ const SideBar = () => {
                     </div>
                     <div className="enrolled out grp">
                         <a onClick={triggerShowEnrolled}>
-                            <SubscriptionsIcon className="icon" />Enrolled
+                            <SubscriptionsIcon className="icon" /><span>Enrolled</span>
                             {isEnrolledShow ? (<KeyboardArrowDownIcon className="arrow" />) : (<KeyboardArrowRightIcon className="arrow" />)}
                         </a>
                         {isEnrolledShow ? (
@@ -66,8 +66,8 @@ const SideBar = () => {
                     </div>
                     <div className="booksmarks out grp">
                         <a onClick={triggerShowBooksmarks}>
-                            <BookmarksIcon className="icon" />WishList
-                            {isBooksmarksShow ? (<KeyboardArrowDownIcon className="arrow" />) : (<KeyboardArrowRightIcon className="arrow" />)}    
+                            <BookmarksIcon className="icon" /><span>WishList</span>
+                            {isBooksmarksShow ? (<KeyboardArrowDownIcon className="arrow" />) : (<KeyboardArrowRightIcon className="arrow" />)}
                         </a>
                         {isBooksmarksShow ? (
                             <div className="list">
@@ -77,7 +77,11 @@ const SideBar = () => {
                         ) : <></>}
                     </div>
                 </div>
-                <div className="logOut"><ExitToAppTwoToneIcon className="icon" onClick={signOut}/><span onClick={signOut}>SignOut</span></div>
+                <div className="out settings">
+                    <a href="/settings">
+                        <SettingsIcon className="icon" /><span>Settings</span>
+                    </a>
+                </div>
             </aside>
         </>
     );

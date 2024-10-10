@@ -1,5 +1,6 @@
 import React from "react";
-import { useState } from 'react';
+import { useState, useContext} from 'react';
+import { AuthContext } from "../../context/authContext";
 import Post from "../../components/post/post";
 import './home.css'
 
@@ -30,9 +31,12 @@ const cardData = [{
 ];
 
 const Home = () => {
+    const {isAuthenticated} = useContext(AuthContext);
+
     return (
         <div className="home">
-            <div className="postWrapper">
+            {isAuthenticated ? (
+                <div className="postWrapper">
                 {cardData.map((data, index) => (
                     <Post
                         key={index}
@@ -46,6 +50,14 @@ const Home = () => {
                 ))
                 }
             </div>
+            ) : (
+                <div className="guest">
+                    <div className="content">
+                        <h4>Welcome to the Home Page</h4>
+                        <p>Please login to view the posts</p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
