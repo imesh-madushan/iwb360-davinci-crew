@@ -1,0 +1,20 @@
+.mainbodyNoAuth{
+    position: relative;
+    top: 68px;
+}
+
+.mainbodyAuth{
+    position: relative;
+    top: 68px;
+    left: 145px;
+    width: calc(100% - 145px);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 480px){
+    .mainbodyAuth{
+        left: 0;
+        width: 100%;
+        top: 90px;
+    }
+}

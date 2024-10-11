@@ -1,0 +1,70 @@
+.navBAuth{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(to right, #0e0ec2b5, #360880c5) 1;
+    background-color: white;
+    height: 68px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    font-size: 13px;
+}
+
+.navBAuth .logo{
+    display: flex;
+    align-items: center;
+    margin: 0.5rem;
+    width: clamp(6rem, 90%, 12rem);
+}
+
+.navBAuth .logo a{
+    display: flex;
+    overflow: hidden;
+}
+
+.navBAuth .logo a img{
+    margin: 0rem;
+    pointer-events: none;
+    width: clamp(6rem, 90%, 9rem);
+    margin: 0rem;
+}
+
+.navBAuth .links{
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5rem;
+    width: clamp(12rem, 90%, 15rem);
+    margin: 0.5rem;
+}
+
+.navBAuth .links a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #161D6F;
+    font-weight: bold;
+    width: clamp(2rem, 50%, 5rem);
+    height: 30px;
+    border: 1px solid #161D6F;
+    background: #dadbe33e;
+    border-radius: 0.5rem;
+}
+
+
+/* Mobile Responsive */
+@media screen and (max-width: 480px){
+    .navBAuth{
+        height: 60px;
+    }
+    
+    .navBAuth .links a{
+        font-size: 0.65rem;
+        width: 65px;
+        height: 25px;
+    }
+}

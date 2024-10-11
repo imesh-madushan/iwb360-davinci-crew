@@ -1,0 +1,117 @@
+.post{
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    font-size: 14px;
+    margin: 10px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    gap: 0.65rem;
+    width: 18rem;
+    max-width: 24rem;
+    box-shadow: 0px 0px 8px 2px #55556021;
+    color: #0b0f3a;
+}
+
+.post .creater{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post .creater img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.post .creater p{
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+}
+
+.post .title{
+    font-size: 14px;
+    font-weight: 500;
+    color: #161D6F;
+}
+
+.post .content p{
+    font-size: 12px;
+}
+.post .content a{
+    color: #2c3bd8;
+    
+}
+.post .content .desc{
+    margin-top: 0.8rem;
+}
+
+.post .actions{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 1.8rem;
+}
+
+.post .actions button{
+    cursor: pointer;
+    border-radius: 6px;
+    width: 4rem;
+    height: 1.58rem;
+    border: 2px solid #161D6F;
+    color: #0b0f3a;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+.post .actions button.active{
+    background-color: #161D6F;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.post .actions .icon{
+    width: 1.7rem;
+    height: 1.7rem;
+    color: #161D6F;
+    cursor: pointer;
+    transition: all 0.9s ease;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 480px){
+    .post{
+        width: 100%;
+        max-width: 100%;
+    }
+    .post .creater img{
+        width: 24px;
+        height: 24px;
+    }
+    .post .creater p{
+        font-size: 12px;
+    }
+    .post .title{
+        font-size: 13px;
+    }
+    .post .content p{
+        font-size: 11px;
+    }
+    .post .actions{
+        gap: 10px;
+    }
+    .post .actions button{
+        width: 3rem;
+        height: 1.3rem;
+        border-radius: 0.3rem;
+        font-size: 0.7rem;
+    }
+    .post .actions .icon{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
