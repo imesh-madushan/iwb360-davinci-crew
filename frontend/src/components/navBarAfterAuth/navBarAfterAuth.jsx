@@ -1,14 +1,24 @@
 import React from "react";
 import { useState } from 'react';
 import BusinessLogo from '../../assests/logo-color2.png';
-import BellIcon from '../../assests/bell.png';
 import UserLogo from '../../assests/user.png';
+import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import { IoIosSearch } from "react-icons/io";
 import './navBarAfterAuth.css';
 
 const newNotifications = 22;
 
 const NavBarAfterAuth = () => {
+  const [isProDropdownShow, setIsProDropdownShow] = useState(false);
+
+  const triggerDropdown = () => {
+    setIsProDropdownShow(!isProDropdownShow);
+  }
+
+  const signOut = () => {
+    console.log('signOut');
+  }
+
   return (
     <>
       <header className="navAAuth">
@@ -21,12 +31,22 @@ const NavBarAfterAuth = () => {
         </div>
         <div className="links">
             <a href="/notifications">
-              <img src={BellIcon} alt="" className="notifi"/>
+              <NotificationsRoundedIcon className="notifi"/>
               {newNotifications > 0 && <div className="count">{newNotifications}</div>}
             </a>
-            <a href="/profile">
-              <img src={UserLogo} alt="" className="profile"/>
-            </a>
+            <div className="profile">
+              <img src={UserLogo} alt="" className="img" onClick={triggerDropdown}/>
+              
+              {isProDropdownShow ? (
+                <div className="drop">
+                  <a href="/infocurrentuser">View Info</a>
+                  <a href="/settings">Settings</a>
+                  <a onClick={signOut} className="signout">Sign Out</a>
+                </div>) : (
+                  null)
+              }
+              
+            </div>
         </div>
       </header>
     </>

@@ -5,7 +5,7 @@
     font-size: 14px;
     margin: 10px;
     padding: 16px;
-    border-radius: 16px;
+    border-radius: 12px;
     background-color: #f9f9f9;
     gap: 0.65rem;
     width: 18rem;
@@ -45,6 +45,7 @@
 }
 .post .content a{
     color: #2c3bd8;
+    
 }
 .post .content .desc{
     margin-top: 0.8rem;
@@ -59,11 +60,13 @@
 
 .post .actions button{
     cursor: pointer;
-    border-radius: 0.5rem;
+    border-radius: 6px;
     width: 4rem;
     height: 1.58rem;
     border: 2px solid #161D6F;
     color: #0b0f3a;
+    font-weight: 500;
+    font-family: 'Poppins';
 }
 .post .actions button.active{
     background-color: #161D6F;

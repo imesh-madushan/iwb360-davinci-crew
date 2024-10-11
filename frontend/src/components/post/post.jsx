@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from 'react';
-import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
-import BookmarkAddedIcon from '@mui/icons-material/BookmarkAdded';
+import BookmarkBorderRoundedIcon from '@mui/icons-material/BookmarkBorderRounded';
+import BookmarkAddedRoundedIcon from '@mui/icons-material/BookmarkAddedRounded';
 import userLogoPng from '../../assests/user.png';
 import './post.css';
 
-const Post = ({creater, title, date, time, url, description}) => {
+const Post = ({creater, title, date, start, end, description}) => {
     const [enrolled, setEnrolled] = useState(false);
     const [bookmark, setBookmark] = useState(false);
 
@@ -28,8 +28,8 @@ const Post = ({creater, title, date, time, url, description}) => {
             </div>
             <div className="content">
                 <p>Date: {date}</p>
-                <p>Time: {time}</p>
-                <p>URL: <a href={url}>{url}</a></p>
+                <p>Start: {start}</p>
+                <p>End: {end}</p>
                 <p className="desc">{description}</p>
             </div>
             <div className="actions">
@@ -37,9 +37,9 @@ const Post = ({creater, title, date, time, url, description}) => {
                 {enrolled ? (<></>):(
                     <>
                         {bookmark ? (
-                            <BookmarkAddedIcon onClick={triggerBookmark} className="bmark icon" />
+                            <BookmarkAddedRoundedIcon onClick={triggerBookmark} className="bmark icon" />
                         ):(
-                            <BookmarkBorderIcon onClick={triggerBookmark} className="bmark icon" />
+                            <BookmarkBorderRoundedIcon onClick={triggerBookmark} className="bmark icon" />
                         )}
                     </>
                 )}

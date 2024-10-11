@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid transparent;
     border-image: linear-gradient(to right, #0e0ec2b5, #360880c5) 1;
     background-color: white;
     height: 68px;
@@ -11,6 +11,7 @@
     left: 0;
     right: 0;
     z-index: 1001;
+    font-size: 14px;
 }
 
 .navAAuth .logo{
@@ -73,10 +74,10 @@
 }
 
 .navAAuth .links a .notifi{
-    width: 1.4rem;
-    height: 1.5rem;
+    width: 1.85rem;
+    height: 1.85rem;
     margin: 0rem;
-
+    color: #161D6F;
 }
 .navAAuth .links a .notifi:hover{
     filter: drop-shadow(0px 0px 3px #05050571);
@@ -91,23 +92,51 @@
     border-radius: 50%;
     background-color: #e70202;
     color: white;
-    top: -4px;
-    right: -8px;
+    top: -3px;
+    right: -6px;
     font-size: 0.67rem;
     margin: 0rem;
     pointer-events: none;
     position: absolute;
 }
 
-.navAAuth .links a .profile{
+.navAAuth .links .profile{
+}
+
+.navAAuth .links .profile img{
     width: 2.5rem;
     height: 2.5rem;
     margin: 0rem;
 }   
-.navAAuth .links a .profile:hover{
+.navAAuth .links .profile img:hover{
     filter: drop-shadow(0px 0px 5px #05050533);
 }
 
+.navAAuth .links .profile .drop{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px #05050533;
+    border-radius: 0.5rem;
+    gap: 0.5rem;
+    right: 0;
+    padding: 1rem;
+    margin-right: 10px;
+    font-size: 0.8rem;
+}
+
+.navAAuth .links .profile .drop a{
+    text-decoration: none;
+    color: #161D6F;
+}
+.navAAuth .links .profile .drop .signout{
+    background-color: transparent;
+    color: #e70202;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+}
 
 
 /* Mobile Responsive */
@@ -123,8 +152,8 @@
     }
 
     .navAAuth .links a .notifi{
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.3rem;
+        height: 1.3rem;
     }
 
     .navAAuth .links a .count{
@@ -132,12 +161,17 @@
         height: 0.8rem;
         font-size: 0.5rem;
         top: -3px;
-        right: -6px;
+        right: -4px;
     }
 
-    .navAAuth .links a .profile{
+    .navAAuth .links .profile img{
         width: 2rem;
         height: 2rem;
     }
     
+    .navAAuth .links .profile .drop{
+        padding: 1rem;
+        gap: 0.6rem;
+        font-size: 0.75rem;
+    }
 }
