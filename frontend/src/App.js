@@ -8,7 +8,8 @@ import NavBarBeforeAuth from './components/navBarBeforeAuth/navBarBeforeAuth';
 import NavBarAfterAuth from './components/navBarAfterAuth/navBarAfterAuth';
 import SideBar from './components/sideBar/sideBar';
 import CreateEvent from './pages/createEvent/createEvent';
-import NotFound from './pages/notFound/notFound';
+import Profile from './pages/Profile/profile';
+import NotFound from './pages/notFound/notFound'; 
 import './App.css';
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/create" element={<CreateEvent />} />
+              <Route path="/profile" element={<Profile />} /> 
               <Route path="/*" element={<NotFound />} />
             </Routes>
           </div>
