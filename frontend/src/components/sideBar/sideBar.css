@@ -2,10 +2,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 165px;
+    width: 145px;
     height: calc(100% - 68px);
-    border-right: 1px solid transparent;
-    border-image: linear-gradient(#161D6F, #2E073F) 1;
+    border-right: 2px solid transparent;
+    border-image: linear-gradient(#0e0ec2b5, #360880c5) 1;
     border-radius: 0rem 1rem 1rem 0rem;
     background-color: white;
     position: fixed;
@@ -93,21 +93,21 @@
         flex-direction: row;
         font-size: 0.7rem;
         height: 30px;
-        width: calc(100% - 10px);
+        width: 100%;
         border-right: none;
-        border-bottom: 1px solid ;
+        border-bottom: 2px solid ;
         border-image: linear-gradient(to right, #0e0ec2b5, #360880c5) 1;
-        justify-content: space-between;
         gap: 0.5rem;
         border-radius: 0rem;
         top: 60px;
-        padding: 0 10px;
     }
 
     .sideBar .links{
         flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
         margin: 0rem;
-        gap: 0.6rem;
+        padding: 0rem 0.5rem;
     }
 
     .sideBar .out{
@@ -127,6 +127,7 @@
     .sideBar .settings{
         align-items: normal;
         margin: 0rem;
+        display: none;
     }
 
     .sideBar .out .icon{

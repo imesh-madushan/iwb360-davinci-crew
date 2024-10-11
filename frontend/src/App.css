@@ -6,8 +6,8 @@
 .mainbodyAuth{
     position: relative;
     top: 68px;
-    left: 165px;
-    width: calc(100% - 165px);
+    left: 145px;
+    width: calc(100% - 145px);
 }
 
 /* Mobile Responsive */

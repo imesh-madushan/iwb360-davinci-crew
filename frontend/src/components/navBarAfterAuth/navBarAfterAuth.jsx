@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from 'react';
 import BusinessLogo from '../../assests/logo-color2.png';
-import BellIcon from '../../assests/bell.png';
 import UserLogo from '../../assests/user.png';
+import NotificationsRoundedIcon from '@mui/icons-material/NotificationsRounded';
 import { IoIosSearch } from "react-icons/io";
 import './navBarAfterAuth.css';
 
@@ -31,7 +31,7 @@ const NavBarAfterAuth = () => {
         </div>
         <div className="links">
             <a href="/notifications">
-              <img src={BellIcon} alt="" className="notifi"/>
+              <NotificationsRoundedIcon className="notifi"/>
               {newNotifications > 0 && <div className="count">{newNotifications}</div>}
             </a>
             <div className="profile">
