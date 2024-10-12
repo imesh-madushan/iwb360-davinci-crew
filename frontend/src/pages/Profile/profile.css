@@ -1,0 +1,93 @@
+.profile-edit {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-save-btn {
+    background-color: #1f405c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-form {
+    display: flex;
+    gap: 20px;
+}
+
+.profile-left-column,
+.profile-right-column {
+    flex: 1;
+}
+
+.profile-form-group {
+    margin-bottom: 15px;
+}
+
+.profile-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.profile-form-group input,
+.profile-form-group select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.profile-dob-select {
+    display: flex;
+    gap: 10px;
+}
+
+.profile-dob-select select {
+    width: 30%;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-payment-methods {
+    margin-top: 20px;
+}
+
+.profile-payment-method {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.profile-add-payment {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
