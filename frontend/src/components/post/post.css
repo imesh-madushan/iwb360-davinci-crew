@@ -9,15 +9,47 @@
     background-color: #f9f9f9;
     gap: 0.65rem;
     width: 18rem;
+    height: fit-content;
     max-width: 24rem;
-    box-shadow: 0px 0px 8px 2px #55556021;
+    box-shadow: 0px 0px 8px 2px #5555600c;
     color: #0b0f3a;
 }
 
 .post .creater{
     display: flex;
+    justify-content: space-between;
+}
+
+.post .creater .info{
+    display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.post .creater .follow{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.post .creater .follow .icon{
+    width: 1.3rem;
+    height: 1.3rem;
+    color: #161D6F;
+    cursor: pointer;
+}
+
+.post .creater .follow span{
+    font-size: 10px;
+    color: #161D6F;
+    cursor: pointer;
+    padding: 0.17rem 0.5rem;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff6a00, #e7197c);
+    -webkit-background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: transparent; 
 }
 
 .post .creater img{
@@ -32,6 +64,10 @@
     font-size: 13px;
     margin: 0;
     padding: 0;
+}
+
+.post .devider{
+    opacity: 0.2;
 }
 
 .post .title{
@@ -60,18 +96,19 @@
 
 .post .actions button{
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 10px;
     width: 4rem;
     height: 1.58rem;
     border: 2px solid #161D6F;
     color: #0b0f3a;
     font-weight: 500;
+    font-size: 12px;
     font-family: 'Poppins';
-}
-.post .actions button.active{
-    background-color: #161D6F;
-    color: white;
-    transition: all 0.3s ease;
+    background-color: transparent;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #161D6F, #c9cbe1);
+    background-size: 0%;
+    background-repeat: no-repeat;
 }
 
 .post .actions .icon{
@@ -79,7 +116,6 @@
     height: 1.7rem;
     color: #161D6F;
     cursor: pointer;
-    transition: all 0.9s ease;
 }
 
 /* Mobile Responsive */
@@ -95,6 +131,15 @@
     .post .creater p{
         font-size: 12px;
     }
+    .post .creater .follow .icon{
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+    .post .creater .follow span{
+        font-size: 8px;
+        padding: 0.1rem 0.3rem;
+        border-radius: 5px;
+    }
     .post .title{
         font-size: 13px;
     }
@@ -105,10 +150,10 @@
         gap: 10px;
     }
     .post .actions button{
-        width: 3rem;
+        width: 3.3rem;
         height: 1.3rem;
-        border-radius: 0.3rem;
-        font-size: 0.7rem;
+        border-radius: 8px;
+        font-size: 0.6rem;
     }
     .post .actions .icon{
         width: 1.5rem;
