@@ -4,13 +4,13 @@
     justify-content: space-between;
     width: 145px;
     height: calc(100% - 68px);
-    border-right: 2px solid transparent;
-    border-image: linear-gradient(#0e0ec2b5, #360880c5) 1;
+    /* border-right: 2px solid transparent; */
+    /* border-image: linear-gradient(#0e0ec2b5, #360880c5) 1; */
     border-radius: 0rem 1rem 1rem 0rem;
     background-color: white;
     position: fixed;
     left: 0;
-    top: 68px;
+    top: 78px;
     user-select: none;
     z-index: 1000;
     color: #161D6F;
@@ -92,11 +92,11 @@
     .sideBar{
         flex-direction: row;
         font-size: 0.7rem;
-        height: 30px;
+        height: 32px;
         width: 100%;
-        border-right: none;
-        border-bottom: 2px solid ;
-        border-image: linear-gradient(to right, #0e0ec2b5, #360880c5) 1;
+        /* border-right: none; */
+        /* border-bottom: 2px solid ; */
+        /* border-image: linear-gradient(to right, #0e0ec2b5, #360880c5) 1; */
         gap: 0.5rem;
         border-radius: 0rem;
         top: 60px;

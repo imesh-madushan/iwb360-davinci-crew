@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+#root{
+  min-height: 100vh;
+  background-color: rgb(239 240 241);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Roboto', 'Oxygen',
