@@ -34,7 +34,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route element={<ProtectedRoutes />}>
-            <Route path="/createEvent" element={<CreateEvent />} />
+            <Route path="/create" element={<CreateEvent />} />
           </Route>
           <Route path="/*" element={<NotFound />} />
         </Routes>
