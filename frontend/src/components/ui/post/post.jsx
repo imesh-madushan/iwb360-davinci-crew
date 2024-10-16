@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import BookmarkBorderRoundedIcon from '@mui/icons-material/BookmarkBorderRounded';
 import BookmarkAddedRoundedIcon from '@mui/icons-material/BookmarkAddedRounded';
 import PersonAddAlt1RoundedIcon from '@mui/icons-material/PersonAddAlt1Rounded';
-import userLogoPng from '../../assests/user.png';
+import userLogoPng from '../../../assests/user.png';
 import './post.css';
 
 const Post = ({creater, title, date, start, end, description}) => {

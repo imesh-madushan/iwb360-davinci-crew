@@ -1,0 +1,99 @@
+.myevent-card{
+    /* display: flex; */
+    /* flex-direction: column; */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /* grid-auto-rows: 1fr; */
+    font-size: 11px;
+    gap: 8px;
+    width: clamp(280px, 80%, 500px);
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    color: #0b0f3a;
+}
+
+.myevent-card.on{
+    background: linear-gradient(145deg, #adb4fbbc, #f0f0f0);
+}
+
+.myevent-card h4{
+    font-size: 15px;
+    font-weight: 900;
+    color: #161D6F;
+}
+
+.myevent-card .publicity{
+    display: flex;
+    gap: 10px;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.myevent-card .publicity p{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.myevent-card .date-enroll{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    grid-row: 3;
+    grid-column: 1 / span 2;
+}
+
+.myevent-card .date-enroll p{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.myevent-card .times{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+    justify-content: space-between;
+    grid-row: 4;
+    grid-column: 1 / span 2;
+}
+
+.myevent-card .times p{
+    display: flex;    
+    gap: 3px;
+    align-items: center;
+}
+
+.myevent-card .desc{
+    grid-row: 5;
+    grid-column: 1 / span 2;
+}
+
+.myevent-card .icon{
+    width: 1.2rem;
+    height: 1.2rem;
+    color: #161D6F;
+    grid-row: 1;
+    grid-column: 2;
+    cursor: pointer;
+}
+
+.myevent-card .actions{
+    display: flex;
+    justify-content: space-between;
+    grid-row: 6;
+    grid-column: 1 / span 2;
+}
+
+.myevent-card .actions button{
+    padding: 7px 18px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 11px;
+    background: #161D6F;
+    color: white;
+}

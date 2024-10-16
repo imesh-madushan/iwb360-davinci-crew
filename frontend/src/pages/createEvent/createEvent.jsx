@@ -109,10 +109,6 @@ const CreateEvent = () => {
                     <input type="text" placeholder="Description" />
                 </div>
                 <div className="col">
-                    <label>URL</label>
-                    <input type="text" placeholder="Meeting Link"/>
-                </div>
-                <div className="col">
                     <label>Publicity</label>
                     <select name="" id="">
                         <option value="public" selected>Public</option>

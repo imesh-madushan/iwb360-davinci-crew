@@ -7,6 +7,7 @@ import NavBarBeforeAuth from './components/navBarBeforeAuth/navBarBeforeAuth';
 import NavBarAfterAuth from './components/navBarAfterAuth/navBarAfterAuth';
 import SideBar from './components/sideBar/sideBar';
 import CreateEvent from './pages/createEvent/createEvent';
+import MyEvents from './pages/myEvents/myEvents';
 import NotFound from './pages/notFound/notFound';
 import { AuthContext } from './context/authContext';
 import ProtectedRoutes from './utils/ProtectedRoutes';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route element={<ProtectedRoutes />}>
             <Route path="/create" element={<CreateEvent />} />
+            <Route path="/myevents" element={<MyEvents />} />
           </Route>
           <Route path="/*" element={<NotFound />} />
         </Routes>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useContext} from 'react';
 import { AuthContext } from "../../context/authContext";
-import Post from "../../components/post/post";
+import Post from "../../components/ui/post/post";
 import './home.css'
 
 const cardData = [{
@@ -48,7 +48,6 @@ const Home = () => {
                         date={data.date}
                         start={data.start}
                         end={data.end}
-                        url={data.url}
                         description={data.description}
                     />
                 ))
