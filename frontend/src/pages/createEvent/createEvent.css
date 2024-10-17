@@ -1,12 +1,115 @@
 .createEvent {
     display: flex;
+    flex-direction: column;
     position: relative;
     align-items: center;
     justify-content: center;
+    border-radius: 12px;
+    background-color: white;
+    margin-inline: 10px;
+    height: 100%;
+    padding: 10px;
 }
 
 .createEvent h1 {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 900;
-    color: #262626;
+    color: #161D6F;
+}
+
+.createEvent .info {
+    display: flex;
+    width: clamp(300px, 80%, 600px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.createEvent .info .col {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.createEvent .info label {
+    font-size: 14px;
+    color: #161D6F;
+}
+
+.createEvent .info input,
+.createEvent .info select{
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(231, 238, 246, 0.592);
+    outline: none;
+}
+
+.createEvent .info .row {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.createEvent .actions {
+    display: flex;
+    width: clamp(300px, 80%, 600px);
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.createEvent .actions button {
+    padding: 8px 18px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 550;
+    background-color: #161D6F;
+    color: white;
+}
+
+.createEvent .inviters {
+    padding: 10px;
+}
+
+.createEvent .inviters .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #161D6F;
+}
+
+.createEvent .inviters .head button {
+    padding: 5px 8px;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    gap: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #161D6F;
+    font-size: 12px;
+}
+
+.createEvent .inviters .head button .icon{
+    font-size: 16px;
+}
+
+
+.createEvent .info input:focus,
+.createEvent .info select:focus,
+.createEvent .info textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px 1px rgba(0, 60, 124, 0.2);
 }

@@ -1,0 +1,158 @@
+.myevent-card{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    font-size: 11px;
+    gap: 8px;
+    width: clamp(280px, 80%, 500px);
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    color: #0b0f3a;
+}
+
+.myevent-card.on{
+    background: linear-gradient(145deg, #adb4fbbc, #f0f0f0);
+}
+
+.myevent-card h4{
+    font-size: 15px;
+    font-weight: 900;
+    color: #161D6F;
+}
+
+.myevent-card .publicity{
+    display: flex;
+    gap: 10px;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.myevent-card .publicity p{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.myevent-card .date-enroll{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    grid-row: 3;
+    grid-column: 1 / span 2;
+}
+
+.myevent-card .date-enroll p{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+}
+
+.myevent-card .times{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    grid-row: 4;
+    grid-column: 1 / span 2;
+}
+
+.myevent-card .times p{
+    display: flex;    
+    gap: 3px;
+    align-items: center;
+}
+
+.myevent-card .desc{
+    grid-row: 5;
+    grid-column: 1 / span 2;
+}
+.myevent-card .desc textarea{
+    width: 100%;
+    height: max-content;
+    padding: 5px;
+    border-radius: 5px;
+    /* background: #f0f0f0; */
+}
+
+.myevent-card .icon{
+    width: 1rem;
+    height: 1rem;
+    color: #161D6F;
+    grid-row: 1;
+    grid-column: 2;
+    cursor: pointer;
+}
+
+.myevent-card .actions{
+    display: flex;
+    justify-content: space-between;
+    grid-row: 6;
+    grid-column: 1 / span 2;
+}
+
+.myevent-card .actions button{
+    padding: 6px 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 10px;
+    background: #161D6F;
+    color: white;
+}
+
+.myevent-card .share{
+    display: flex;
+}
+
+.myevent-card .share .options{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 8px;
+    background: linear-gradient(145deg, #d5d7f6, #f0f0f0);
+    padding: 6px 8px;
+    border-radius: 8px;
+    transform: translateX(-70px) translateY(-50px);
+    box-shadow: 0px 0px 4px #0a0e4d46;
+}
+
+.myevent-card .share .options button{
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 10px;
+    color: #0b0f3a;
+    background: none;
+}
+
+.myevent-card input,
+.myevent-card select,
+.myevent-card textarea{
+    font-size: 11px;
+    outline: none;
+    /* border: none; */
+    background: rgb(239 240 241);
+}
+
+.myevent-card h4 input{
+    font-size: 15px;
+    font-weight: 900;
+    color: #161D6F;
+    outline: none;
+}
+
+.myevent-card input.error,
+.myevent-card select.error,
+.myevent-card textarea.error{
+    border: 1px solid red;
+}
+
+.myevent-card input:focus,
+.myevent-card select:focus,
+.myevent-card textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px 1px rgba(0, 60, 124, 0.2);
+}
