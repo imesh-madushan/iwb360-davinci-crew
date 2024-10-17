@@ -39,8 +39,8 @@
 
 .createEvent .info input,
 .createEvent .info select{
-    padding: 12px;
-    border-radius: 4px;
+    padding: 8px 10px;
+    border-radius: 10px;
     border: none;
     background-color: rgba(231, 238, 246, 0.592);
     outline: none;
@@ -107,137 +107,9 @@
 }
 
 
-
-.add-users{
-    display: flex;
-    gap: 10px;
-    position: absolute;
-    justify-content: center;
-    z-index: 1;
-    background-color: rgba(9, 25, 62, 0.119);
-    border-radius: 8px;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);    
-    padding: 10px;
-}
-
-.add-users .add-dropDown {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: fit-content;
-    max-height: 16rem;
-    border-radius: 8px;
-    background-color: rgb(231, 238, 246);
-    padding: 1rem;
-    overflow: hidden;
-}
-
-.add-users .add-dropDown .search {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    padding: 2px 8px;
-}
-
-.add-users .add-dropDown .search .icon {
-    width: 1.3rem;
-    height: 1.3rem;
-    cursor: pointer;
-    color: #161D6F;
-}
-
-.add-users .add-dropDown .search hr {
-    height: 1rem;
-    border: 1px solid #161D6F;
-    opacity: 0.2;
-}
-
-.add-users .add-dropDown .search input {
-    border: none;
-    outline: none;
-    padding: 5px;
-    border-radius: 8px;
-}
-
-.add-users .add-dropDown .people {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 5px;
-    overflow-y: auto;
-}
-
-.add-users .added-list{
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-    max-height: 16rem;
-    gap: 5px;
-    min-width: 8rem;
-    padding: 5px;
-    border-radius: 8px;
-    background-color: rgb(231, 238, 246);
-}
-
-.add-users .added-list .head {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    font-size: 10px;
-    font-weight: 500;
-}
-
-.add-users .added-list .head .icon {
-    font-size: 18px;
-    color: #161D6F;
-}
-
-.add-users .added-list .people {
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-    gap: 5px;
-    border-radius: 8px;
-    overflow-y: auto;
-    background-color: rgba(231, 238, 246, 0.534);
-}
-
-
-.userItem {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: fit-content;
-    gap: 5px;
-    padding: 5px;
-    border-radius: 9px;
-    background-color: rgba(255, 255, 255, 0.9);
-}
-
-.userItem .u-info{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-}
-
-.userItem .u-info img {
-    width: 1.45rem;
-    height: 1.45rem;
-    border-radius: 50%;
-}
-
-.userItem .u-info p {
-    font-size: 10px;
-    color: #161D6F;
-}
-
-.userItem .icon {
-    font-size: 16px;
-    cursor: pointer;
-    color: #161D6F;
+.createEvent .info input:focus,
+.createEvent .info select:focus,
+.createEvent .info textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px 1px rgba(0, 60, 124, 0.2);
 }

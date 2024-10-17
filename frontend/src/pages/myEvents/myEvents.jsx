@@ -20,7 +20,7 @@ const MyEvents = () => {
         {
             id: 2,
             name: 'Meeting 2',
-            date: '2022-10-10',
+            date: '2024-10-17',
             start: '11:00',
             end: '12:00',
             enrolled: 3,
@@ -77,6 +77,7 @@ const MyEvents = () => {
         setEvents(events.filter(e => e.id !== event.id));
     }
 
+    
     return (
         <div className='myevents'>
             <h1>Meetings Hosted By You</h1>
@@ -98,7 +99,6 @@ const MyEvents = () => {
                     ))}
                 </div>
             </div>
-            <hr />
             <div className="upcoming">
                 <h3>Upcoming</h3>
                 <div className="wrapper">
