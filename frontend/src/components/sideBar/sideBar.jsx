@@ -1,83 +1,127 @@
 import React from "react";
-import { useState } from 'react';
-import HomeIcon from '@mui/icons-material/Home';
-import EventNoteIcon from '@mui/icons-material/EventNote';
-import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
-import BookmarksIcon from '@mui/icons-material/Bookmarks';
-import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import ExitToAppTwoToneIcon from '@mui/icons-material/ExitToAppTwoTone';
+import { useState, useEffect, useRef } from 'react';
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import EventNoteRoundedIcon from '@mui/icons-material/EventNoteRounded';
+import SubscriptionsRoundedIcon from '@mui/icons-material/SubscriptionsRounded';
+import BookmarksRoundedIcon from '@mui/icons-material/BookmarksRounded';
+import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
+import AlternateEmailRoundedIcon from '@mui/icons-material/AlternateEmailRounded';
+import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import './sideBar.css';
 
-const signOut = () => {
-    console.log('signOut');
-}
+
+const SideOptionDiv = ({index, name, icon, link}) => {
+    const ref = useRef(null);
+
+    const Icon = icon;
+    
+    const handleMouseEnterSideOption = (event) => {
+        const icon = event.currentTarget.querySelector(".icon");
+        const span = event.currentTarget.querySelector("span");
+        
+        gsap.to(icon, {
+            rotate: -10,
+            scale: 1.05,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+
+        gsap.to(span, {
+            scale: 1.05,
+            x: 5,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+    };
+
+    const handleMouseLeaveSideOption = (event) => {
+        const icon = event.currentTarget.querySelector(".icon");
+        const span = event.currentTarget.querySelector("span");
+
+        gsap.to(icon, {
+            rotate: 0,
+            scale: 1,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+
+        gsap.to(span, {
+            scale: 1,
+            x: 0,
+            duration: 0.3,
+            ease: "power2.out"
+        });
+    };
+
+    return (
+        <div className="out" key={index}>
+            <a href={link} onMouseEnter={handleMouseEnterSideOption} onMouseLeave={handleMouseLeaveSideOption}>
+                <Icon className="icon" /><span>{name}</span>
+            </a>
+        </div>
+    );
+};
 
 const SideBar = () => {
-    const [isMyeventsShow, setIsMyeventsShow] = useState(false);
-    const [isEnrolledShow, setIsEnrolledShow] = useState(false);
-    const [isBooksmarksShow, setIsBooksmarksShow] = useState(false);
-
-
-    const triggerShowMyevents = () => {
-        setIsMyeventsShow(!isMyeventsShow);
-    }
-    const triggerShowEnrolled = () => {
-        setIsEnrolledShow(!isEnrolledShow);
-    }
-    const triggerShowBooksmarks = () => {
-        setIsBooksmarksShow(!isBooksmarksShow);
-    }
+    const sideOptions = [
+        {
+            name: "Home",
+            icon: HomeRoundedIcon,
+            link: "/"
+        },
+        {
+            name: "Create",
+            icon: AddCircleOutlineRoundedIcon,
+            link: "/create"
+        },
+        {
+            name: "My Events",
+            icon: EventNoteRoundedIcon,
+            link: "/myevents"
+        },
+        {
+            name: "Enrolled",
+            icon: SubscriptionsRoundedIcon,
+            link: "/enrolled"
+        },
+        {
+            name: "WishList",
+            icon: BookmarksRoundedIcon,
+            link: "/wishlist"
+        },
+        {
+            name: "Invited",
+            icon: AlternateEmailRoundedIcon,
+            link: "/invited"
+        }
+    ];
 
     return (
         <>
             <aside className="sideBar">
                 <div className="links">
-                    <div className="out">
-                        <a href="/"><HomeIcon className="icon" /> Home</a>
-                    </div>
-                    <div className="out">
-                        <a href="/create"><AddCircleOutlineIcon className="icon"/>Create</a>
-                    </div>
-                    <div className="myevents out grp">
-                        <a onClick={triggerShowMyevents}>
-                            <EventNoteIcon className="icon" />My Eevents
-                            {isMyeventsShow ? (<KeyboardArrowDownIcon className="arrow" />) : (<KeyboardArrowRightIcon className="arrow" />)}
-                        </a>
-                        {isMyeventsShow ? (
-                            <div className="list">
-                                <a href="/myongoings">ongoing</a>
-                                <a href="/myupcommings">upcomming</a>
-                            </div>
-                        ) : <></>}
-                    </div>
-                    <div className="enrolled out grp">
-                        <a onClick={triggerShowEnrolled}>
-                            <SubscriptionsIcon className="icon" />Enrolled
-                            {isEnrolledShow ? (<KeyboardArrowDownIcon className="arrow" />) : (<KeyboardArrowRightIcon className="arrow" />)}
-                        </a>
-                        {isEnrolledShow ? (
-                            <div className="list">
-                                <a href="/enongoings">ongoing</a>
-                                <a href="/enupcommings">upcomming</a>
-                            </div>
-                        ) : <></>}
-                    </div>
-                    <div className="booksmarks out grp">
-                        <a onClick={triggerShowBooksmarks}>
-                            <BookmarksIcon className="icon" />WishList
-                            {isBooksmarksShow ? (<KeyboardArrowDownIcon className="arrow" />) : (<KeyboardArrowRightIcon className="arrow" />)}    
-                        </a>
-                        {isBooksmarksShow ? (
-                            <div className="list">
-                                <a href="/wiongoings">ongoing</a>
-                                <a href="/wiupcommings">upcomming</a>
-                            </div>
-                        ) : <></>}
-                    </div>
+                    {sideOptions.map((option, index) => (
+                        <SideOptionDiv
+                            key={index}
+                            index={index}
+                            name={option.name}
+                            icon={option.icon}
+                            link={option.link}
+                        />
+                    ))}
                 </div>
-                <div className="logOut"><ExitToAppTwoToneIcon className="icon" onClick={signOut}/><span onClick={signOut}>SignOut</span></div>
+                <div className="out settings">
+                    {
+                        <SideOptionDiv
+                            index={sideOptions.length}
+                            name={"Settings"}
+                            icon={SettingsRoundedIcon}
+                            link={"/settings"}
+                        />
+                    }
+                </div>
             </aside>
         </>
     );
