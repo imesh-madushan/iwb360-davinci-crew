@@ -5,17 +5,20 @@ import { useGSAP } from "@gsap/react";
 import BookmarkBorderRoundedIcon from '@mui/icons-material/BookmarkBorderRounded';
 import BookmarkAddedRoundedIcon from '@mui/icons-material/BookmarkAddedRounded';
 import PersonAddAlt1RoundedIcon from '@mui/icons-material/PersonAddAlt1Rounded';
+import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded';
+import TimerRoundedIcon from '@mui/icons-material/TimerRounded';
+import AccessTimeFilledRoundedIcon from '@mui/icons-material/AccessTimeFilledRounded';
 import userLogoPng from '../../../assests/user.png';
 import './post.css';
 
-const Post = ({creater, title, date, start, end, description}) => {
+const Post = ({ creater, title, date, start, end, description }) => {
     const [enrolled, setEnrolled] = useState(false);
     const [bookmark, setBookmark] = useState(false);
     const enrollRef = useRef(null);
     const followRef = useRef(null);
 
     //TODO: function to check if current user follows the creater
-    const [isFollowing, setIsFollowing] = useState(false); 
+    const [isFollowing, setIsFollowing] = useState(false);
 
     const triggerEnrolled = () => {
         setEnrolled(!enrolled);
@@ -25,15 +28,15 @@ const Post = ({creater, title, date, start, end, description}) => {
             gsap.fromTo(enrollRef.current, {
                 ease: "power2.in",
             },
-            {
-                duration: 0.5,
-                backgroundSize: "1000%",
-                ease: "power2.in",
-                onStart: () => {
-                    enrollRef.current.style.color = "white";
-                    enrollRef.current.textContent = "Enrolled";
-                }
-            });
+                {
+                    duration: 0.5,
+                    backgroundSize: "1000%",
+                    ease: "power2.in",
+                    onStart: () => {
+                        enrollRef.current.style.color = "white";
+                        enrollRef.current.textContent = "Enrolled";
+                    }
+                });
         }
 
         else {
@@ -48,9 +51,9 @@ const Post = ({creater, title, date, start, end, description}) => {
                 onComplete: () => {
                     enrollRef.current.textContent = "Enroll";
                     gsap.to(enrollRef.current, {
-                      duration: 0.1,
-                      color: "#161D6F",
-                      ease: "power2.out",
+                        duration: 0.1,
+                        color: "#161D6F",
+                        ease: "power2.out",
                     });
                 },
             });
@@ -96,33 +99,32 @@ const Post = ({creater, title, date, start, end, description}) => {
                 <div className="follow" onClick={handleFollow} ref={followRef}>
                     {isFollowing ? (
                         <span>following</span>
-                    ):(
+                    ) : (
                         <PersonAddAlt1RoundedIcon className="icon" />
                     )}
                 </div>
             </div>
-            <hr className="devider"/>
+            <hr className="devider" />
             <div className="title">
                 <h4>{title}</h4>
             </div>
             <div className="content">
-                <p>Date: {date}</p>
-                <p>Start: {start}</p>
-                <p>End: {end}</p>
+                <p><CalendarMonthRoundedIcon className="icon" /> Date: {date}</p>
+                <p><TimerRoundedIcon className="icon" /> Start: {start}</p>
+                <p><AccessTimeFilledRoundedIcon className="icon" /> End: {end}</p>
                 <p className="desc">{description}</p>
             </div>
             <div className="actions">
                 <button onClick={triggerEnrolled} ref={enrollRef}>Enroll</button>
-                {enrolled ? (<></>):(
+                {enrolled ? (<></>) : (
                     <>
                         {bookmark ? (
                             <BookmarkAddedRoundedIcon onClick={triggerBookmark} className="bmark icon" />
-                        ):(
+                        ) : (
                             <BookmarkBorderRoundedIcon onClick={triggerBookmark} className="bmark icon" />
                         )}
                     </>
                 )}
-                
             </div>
         </div>
     )
