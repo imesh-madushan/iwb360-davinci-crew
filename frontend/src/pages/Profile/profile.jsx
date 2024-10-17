@@ -10,22 +10,29 @@ function ProfileEdit() {
         address: "116 Jaskolski Straveneue Suite 883",
         nation: "Colombia",
         gender: "Male",
-        language: "English"
+        language: "English",
+        dob: { month: "September", day: "31", year: "1990" },
+        google: "Zachary Ruiz",
+        slogan: "Land Acquisition Specialist",
+        paymentMethods: [
+            { type: "Visa", lastFour: "8314", expiry: "06/21" },
+            { type: "MasterCard", lastFour: "8314", expiry: "07/19" }
+        ]
     });
 
     const [isFollowersOpen, setIsFollowersOpen] = useState(false);
     const [isFollowingsOpen, setIsFollowingsOpen] = useState(false);
 
     const followers = [
-        { name: "John Doe" },
-        { name: "Jane Smith" },
-        { name: "Alice Johnson" }
+        { name: "John Doe"},
+        { name: "Jane Smith"},
+        { name: "Alice Johnson"}
     ];
 
     const followings = [
-        { name: "Michael Brown" },
-        { name: "Emily Davis" },
-        { name: "Chris Wilson" }
+        { name: "Michael Brown"},
+        { name: "Emily Davis"},
+        { name: "Chris Wilson"}
     ];
 
     const handleClose = () => {
@@ -42,20 +49,13 @@ function ProfileEdit() {
                 <div className="profile-follow-stats">
                     <div
                         className="profile-followers-box"
-                        onClick={() => {
-                            setIsFollowersOpen(!isFollowersOpen);
-                            setIsFollowingsOpen(false); // Close followings dropdown when followers is clicked
-                        }}
+                        onClick={() => setIsFollowersOpen(true)}
                     >
                         <p>Followers: <span>320</span></p>
                     </div>
-
                     <div
                         className="profile-followings-box"
-                        onClick={() => {
-                            setIsFollowingsOpen(!isFollowingsOpen);
-                            setIsFollowersOpen(false); // Close followers dropdown when followings is clicked
-                        }}
+                        onClick={() => setIsFollowingsOpen(true)}
                     >
                         <p>Following: <span>150</span></p>
                     </div>
@@ -98,7 +98,7 @@ function ProfileEdit() {
                 <div className="profile-right-column">
                     <div className="profile-form-group">
                         <label>Gender</label>
-                        <select value={profile.gender}>
+                        <select value={profile.gender} readOnly>
                             <option>Male</option>
                             <option>Female</option>
                             <option>Other</option>
@@ -106,17 +106,71 @@ function ProfileEdit() {
                     </div>
                     <div className="profile-form-group">
                         <label>Language</label>
-                        <select value={profile.language}>
+                        <select value={profile.language} readOnly>
                             <option>English</option>
                             <option>Spanish</option>
                             <option>Other</option>
                         </select>
                     </div>
+                    <div className="profile-form-group">
+                        <label>Date of Birth</label>
+                        <div className="profile-dob-select">
+                            <select value={profile.dob.month} readOnly>
+                                <option>September</option>
+                            </select>
+                            <select value={profile.dob.day} readOnly>
+                                <option>31</option>
+                            </select>
+                            <select value={profile.dob.year} readOnly>
+                                <option>1990</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
             </form>
 
+            {isFollowersOpen && (
+    <div className="profile-modal">
+        <div className="profile-modal-content">
+            <div className="profile-modal-header">
+                <h3>Followers</h3>
+                <button className="profile-close-btn" onClick={handleClose}>X</button>
+            </div>
+            <ul>
+                {followers.map((follower, index) => (
+                    <li key={index}>
+                        <span>{follower.name}</span>
+                        <button className="profile-view-btn">View</button>
+                        <button className="profile-remove-btn">Remove</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+)}
 
-            
+
+            {/* Followings Modal */}
+            {isFollowingsOpen && (
+    <div className="profile-modal">
+        <div className="profile-modal-content">
+            <div className="profile-modal-header">
+                <h3>Followings</h3>
+                <button className="profile-close-btn" onClick={handleClose}>X</button>
+            </div>
+            <ul>
+                {followings.map((following, index) => (
+                    <li key={index}>
+                        <span>{following.name}</span>
+                        <button className="profile-view-btn">View</button>
+                        <button className="profile-remove-btn">Remove</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
+    </div>
+)}
+
         </div>
     );
 }

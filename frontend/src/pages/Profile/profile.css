@@ -1,203 +1,4 @@
-.profile-edit {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: Arial, sans-serif;
-}
 
-.profile-top-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f1eff5;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background-image: url('C:\Users\LIYANAGENS\Desktop\Ballerina 01\iwb360-davinci-crew\frontend\src\assests\living.gif');
-    background-size: 30%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-width: 2px;
-    border-style: solid;
-    border-color: #1b2983;
-    animation: border-animation 6s infinite; 
-}
-
-.profile-name {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333;
-}
-
-.profile-follow-stats {
-    display: flex;
-    gap: 30px;
-}
-
-.profile-followers-box,
-.profile-followings-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(135deg, #092b51, #7db9f5);
-    padding: 10px;
-    padding-left: 15px;
-    padding-inline: 15px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    text-decoration: none;
-    position: relative;
-    overflow: hidden;
-    color: #fff;
-}
-
-.profile-followers-box:hover,
-.profile-followings-box:hover {
-    transform: scale(1.05);
-    cursor: pointer;
-    background: linear-gradient(135deg, #161D6F, #6cb0eb);
-}
-
-.profile-followers-box p,
-.profile-followings-box p {
-    margin: 0;
-    font-weight: bold;
-    font-size: 0.9em;
-    z-index: 1;
-}
-
-.profile-followers-box span,
-.profile-followings-box span {
-    font-size: 1em;
-    font-weight: bold;
-    z-index: 1;
-}
-
-
-
-.profile-save-btn {
-    background-color: #161D6F;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-  
-  .profile-save-btn:hover {
-    background-color: #457fa0;
-  }
-  
-  .profile-form {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .profile-left-column, .profile-right-column {
-    width: 50%;
-  }
-  
-  .profile-form-group {
-    margin-bottom: 15px;
-  }
-  
-  .profile-form-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  .profile-form-group input, .profile-form-group select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-
-
-
-.profile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.profile-header h2 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.profile-save-btn {
-    background-color: #161D6F;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.profile-form {
-    display: flex;
-    gap: 20px;
-}
-
-.profile-left-column,
-.profile-right-column {
-    flex: 1;
-}
-
-.profile-form-group {
-    margin-bottom: 15px;
-}
-
-.profile-form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.profile-form-group input,
-.profile-form-group select {
-    width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.profile-dob-select {
-    display: flex;
-    gap: 10px;
-}
-
-.profile-dob-select select {
-    width: 30%;
-}
-
-
-@keyframes border-animation {
-    0% {
-      border-color: transparent transparent transparent #1b2983;
-    }
-    25% {
-      border-color: transparent transparent #1b2983 transparent;
-    }
-    50% {
-      border-color: transparent #1b2983 transparent transparent;
-    }
-    75% {
-      border-color: #1b2983 transparent transparent transparent;
-    }
-    100% {
-      border-color: transparent transparent transparent #1b2983;
-    }
-  }
-
-  /* General profile container */
 .profile-edit {
   max-width: 1000px;
   margin: 0 auto;
@@ -210,9 +11,22 @@
 .profile-top-info {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: #f1eff5;
   padding: 15px;
+  margin-bottom: 20px;
   border-radius: 8px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-image: url('C:/Users/LIYANAGENS/Desktop/Ballerina 01/iwb360-davinci-crew/frontend/src/assests/living.gif');
+  background-size: 30%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #1b2983;
+  animation: border-animation 6s infinite;
 }
 
 .profile-name {
@@ -227,36 +41,178 @@
 }
 
 .profile-followers-box, .profile-followings-box {
-  background: linear-gradient(135deg, #092b51, #7db9f5);
-  padding: 10px;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  text-align: center;
-}
-
-.profile-followers-box:hover, .profile-followings-box:hover {
-  background: linear-gradient(135deg, #161D6F, #6cb0eb);
-  transform: scale(1.05);
-}
-
-
-.profile-modal {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
-  width: 400px;
-}
-.profile-modal-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: linear-gradient(135deg, #092b51, #7db9f5);
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
 }
+
+.profile-followers-box:hover, .profile-followings-box:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #161D6F, #6cb0eb);
+}
+
+.profile-followers-box p, .profile-followings-box p,
+.profile-followers-box span, .profile-followings-box span {
+  margin: 0;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.profile-save-btn {
+  background-color: #161D6F;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-save-btn:hover {
+  background-color: #457fa0;
+}
+
+.profile-form {
+  display: flex;
+  gap: 20px;
+}
+
+.profile-left-column, .profile-right-column {
+  flex: 1;
+}
+
+.profile-form-group {
+  margin-bottom: 15px;
+}
+
+.profile-form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.profile-form-group input, .profile-form-group select {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-dob-select {
+  display: flex;
+  gap: 10px;
+}
+
+.profile-dob-select select {
+  width: 30%;
+}
+
+/* Animation for border */
+@keyframes border-animation {
+  0% { border-color: transparent transparent transparent #1b2983; }
+  25% { border-color: transparent transparent #1b2983 transparent; }
+  50% { border-color: transparent #1b2983 transparent transparent; }
+  75% { border-color: #1b2983 transparent transparent transparent; }
+  100% { border-color: transparent transparent transparent #1b2983; }
+}
+
+/* Blur effect when modal is open */
+/* .profile-blur-background {
+  filter: blur(5px);
+  pointer-events: none;
+} */
+
+.profile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.profile-modal-content {
+  background-color: rgba(255, 255, 255, 0.943);;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+
+.profile-close-btn {
+  align-self: flex-end;
+  background: #484747;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.profile-close-btn:hover {
+  background: #525252;
+}
+
+.profile-view-btn, .profile-remove-btn {
+  background-color: #045dc2;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.profile-view-btn:hover, .profile-remove-btn:hover {
+  background-color: #457fa0;
+}
+
+.profile-view-btn {
+  margin-left: 5px;
+}
+
+
+.profile-modal ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-modal li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-modal li span {
+  flex: 1;
+  margin-right: 5px;
+}
+
+.profile-modal-content h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+.profile-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 
