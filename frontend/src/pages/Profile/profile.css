@@ -239,7 +239,8 @@
   background: linear-gradient(135deg, #161D6F, #6cb0eb);
   transform: scale(1.05);
 }
-/* Initially hide the modal */
+
+
 .profile-modal {
   display: none;
   position: fixed;
@@ -253,106 +254,9 @@
   z-index: 1000;
   width: 400px;
 }
-
-/* Modal content styles */
 .profile-modal-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Close button */
-.profile-close-btn {
-  align-self: flex-end;
-  background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 15px;
-}
-
-.profile-close-btn:hover {
-  background: #c0392b;
-}
-
-/* View and Remove buttons */
-.profile-view-btn, .profile-remove-btn {
-  background-color: #161D6F;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-left: 10px;
-}
-
-.profile-view-btn:hover, .profile-remove-btn:hover {
-  background-color: #457fa0;
-}
-
-/* Dropdown container */
-/* Dropdown container */
-.profile-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: white;
-  width: 250px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  padding: 20px;
-  margin-top: 10px;
-}
-
-/* Dropdown list items */
-.profile-dropdown ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.profile-dropdown li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.profile-dropdown li span {
-  font-weight: bold;
-}
-
-.profile-dropdown .profile-view-btn,
-.profile-dropdown .profile-remove-btn {
-  background-color: #161D6F;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.profile-dropdown .profile-view-btn:hover,
-.profile-dropdown .profile-remove-btn:hover {
-  background-color: #457fa0;
-}
-
-/* Dropdown close button */
-.profile-dropdown .profile-close-btn {
-  background: #e74c3c;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
-.profile-dropdown .profile-close-btn:hover {
-  background: #c0392b;
-}
