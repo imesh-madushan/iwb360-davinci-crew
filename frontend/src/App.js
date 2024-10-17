@@ -8,7 +8,7 @@ import NavBarBeforeAuth from './components/navBarBeforeAuth/navBarBeforeAuth';
 import NavBarAfterAuth from './components/navBarAfterAuth/navBarAfterAuth';
 import SideBar from './components/sideBar/sideBar';
 import CreateEvent from './pages/createEvent/createEvent';
-import Profile from './pages/profile/profile';
+import Profile from './pages/Profile/profile';
 import NotFound from './pages/notFound/notFound'; 
 import './App.css';
 

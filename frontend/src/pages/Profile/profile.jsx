@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './profile.css';
 
-function ProfileEdit() {
+const Profile = () => {
     const [profile, setProfile] = useState({
         firstName: "Arthur",
         lastName: "Nancy",
@@ -175,4 +175,4 @@ function ProfileEdit() {
     );
 }
 
-export default ProfileEdit;
+export default Profile;
