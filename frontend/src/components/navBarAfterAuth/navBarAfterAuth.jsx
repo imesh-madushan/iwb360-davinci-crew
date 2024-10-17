@@ -116,7 +116,7 @@ const NavBarAfterAuth = () => {
 
                         {isProDropdownShow &&
                             <div className="drop" ref={dropDownRef}>
-                                <a href="/infocurrentuser">View Info</a>
+                                <a href="/profile">View Info</a>
                                 <a href="/settings">Settings</a>
                                 <a onClick={signOut} className="signout">Sign Out</a>
                             </div>
