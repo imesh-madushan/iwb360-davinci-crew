@@ -53,6 +53,15 @@ function insertUser (UserRegisterDTO newUser) returns User|error {
     return newSavedUser;
 }   
 
+function logUser (UserLoginDTO user) returns User|error {
+    sql:ParameterizedQuery selectQuery = `SELECT UserID, Name, Email, Gender FROM user WHERE Email = ${user.Email} AND Password = ${user.Password}`;
+    User usr = check dbClient->queryRow(selectQuery);
+    usr.Password = "********";
+    
+    return usr;
+}
+
+
 function getUser (int id) returns User|error{
     sql:ParameterizedQuery selectQuery = `SELECT UserID, Name, Email, Gender FROM user WHERE id = ${id}`;
     return dbClient->queryRow(selectQuery);
