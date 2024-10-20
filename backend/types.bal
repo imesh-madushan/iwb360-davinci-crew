@@ -60,3 +60,8 @@ type UserRegisterDTO record {|
     string Password;
     string Gender;
 |};
+
+type UserLoginDTO record {|
+    string Email;
+    string Password;
+|};

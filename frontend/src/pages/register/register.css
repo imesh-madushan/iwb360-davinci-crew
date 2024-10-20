@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     min-height: 90vh;	
-    background: url('../../assests/loginCover.jpeg');
+    background: linear-gradient(#ffff, #8dd3ff);
     background-size: cover;
     background-position: center;
  }

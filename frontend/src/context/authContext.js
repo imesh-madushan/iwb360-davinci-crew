@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 export const AuthContext = createContext();
 
 export const AuthProvider = ({children}) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
 
     //validate the user is logged in
     useEffect(() => {
