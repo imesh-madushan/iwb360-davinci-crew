@@ -6,6 +6,7 @@
 .mainbodyAuth{
     position: relative;
     top: 68px;
+    padding-top: 10px;
     left: 145px;
     width: calc(100% - 145px);
 }
@@ -15,6 +16,6 @@
     .mainbodyAuth{
         left: 0;
         width: 100%;
-        top: 90px;
+        top: 92px;
     }
 }

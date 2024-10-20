@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+#root{
+  min-height: 100vh;
+  background-color: rgb(239 240 241);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Roboto', 'Oxygen',
@@ -15,4 +20,29 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+button {
+  font-family: 'Poppins';
+}
+
+::placeholder {
+  font-family: 'Poppins';
+  color: #9b9b9b;
+}
+
+input, select, textarea {
+  border-radius: 4px;
+  padding: 0px 8px;
+  font-family: 'Poppins';
+  color: #333;
+  border: 1px solid #cccccc63;
+}
+  
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  padding: 0px;
+  cursor: pointer;
+  border-radius: 3px;
 }

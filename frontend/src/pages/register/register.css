@@ -1,0 +1,129 @@
+  .register{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;	
+    background: linear-gradient(#ffff, #8dd3ff);
+    background-size: cover;
+    background-position: center;
+ }
+ .register .register-wrapper{
+    width: 350px;
+    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    backdrop-filter: blur(10px);
+    color: #161D6F;
+    border-radius: 10px;
+    padding: 10px 40px; 
+ }
+ .register .register-wrapper h1{
+    font-size: 30px;
+    text-align: center;
+    color: #161D6F;
+    margin-top: 20px;
+ }
+ .register .register-wrapper p{
+    font-size: 12px;
+    margin: 10px 0 30px;
+    color: #161D6F;
+    text-align: center;
+    font-weight: 500;
+ }
+ .register .register-wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+ }
+.register .register-wrapper .input-box input{
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      border: 1px solid #161D6F;
+      border-radius: 40px;
+      font-size: 14px;
+      color: #161D6F;
+      padding: 20px 45px 20px 20px;
+      box-sizing: border-box;
+}
+.register .register-wrapper .input-box input::placeholder{
+      color: #161D6F;
+}
+.register .register-wrapper .selection-box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    margin: 15px 0;
+}
+.register .register-wrapper .selection-box select{
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        border: 1px solid #161D6F;
+        outline: none;
+        border-radius: 40px;
+        font-size: 14px;
+        color: #161D6F;
+        padding: 5px 5px 5px 15px;
+        box-sizing: border-box;
+        appearance: none;
+}
+.register .register-wrapper .input-box .icon{
+   position: absolute;
+   right: 20px;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 14px;   
+}
+.register .register-wrapper .selection-box .icon{
+    position: absolute;
+    right: 55px;
+    top: 63%;
+ }
+.register .register-wrapper .remember-box{
+   display: flex;
+   font-size: 12px;
+   margin: -5px 5px 15px;
+   justify-content: center;
+   align-items: center;
+   padding: 7px;	
+}
+.register .register-wrapper .remember-box label input{
+   accent-color: #161D6F;
+   margin-right: 4px;
+}
+.register .register-wrapper .remember-box a{
+   color: #161D6F;
+   text-decoration: none;
+}
+.register .register-wrapper button{
+   width: 100%;
+   height: 40px;
+   background: #161D6F;
+   border: none;
+   outline: none;
+   border-radius: 40px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+   cursor: pointer;
+   font-size: 14px;
+   color: whitesmoke;
+   font-weight: 750;
+}
+.register .register-wrapper .login-link{
+   font-size: 14px;
+   text-align: center;
+   margin: 20px 0 15px;
+}
+.register .register-wrapper .login-link p a{
+   color: #161D6F;
+   text-decoration: none;
+   font-weight: 600;
+}
+.register .register-wrapper .login-link p a:hover{
+   text-decoration: underline;
+}
